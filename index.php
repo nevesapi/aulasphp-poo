@@ -21,6 +21,10 @@
   $clienteA->nome = "Ciclano";
   $clienteA->idade = 30;
   $clienteA->email = " exemplo@teste.com";
+
+  $clienteB->nome = "Beltrano";
+  $clienteB->idade = 130;
+  $clienteB->email = "exemplo@teste.com";
   ?>
 
   <h2>Acessando/lendo os dados dos objetos</h2>
@@ -32,6 +36,18 @@
   <ul>
     <li><b>Idade: </b><?= $clienteA->idade ?></li>
     <li><b>E-mail: </b><?= $clienteA->email ?></li>
+  </ul>
+
+  <hr>
+
+  <h3>Cliente B</h3>
+
+  <div>
+    <?= $clienteB->exibirDados() ?>
+  </div>
+  <ul>
+    <li><b>Idade: </b><?= $clienteB->idade ?></li>
+    <li><b>E-mail: </b><?= $clienteB->email ?></li>
   </ul>
   <h2>Testes de acessos aos recursos da classe através do objeto</h2>
   <pre><?= var_dump($clienteA) ?></pre>
