@@ -18,9 +18,12 @@
   $clienteA = new Cliente();
   $clienteB = new Cliente();
 
+  $clienteA->nome = "Ciclano";
+  $clienteA->idade = 30;
+  $clienteA->email = " exemplo@teste.com";
   ?>
 
-  <h2>Testes de acessos aos recursos da classe atravé sdo objeto</h2>
+  <h2>Testes de acessos aos recursos da classe através do objeto</h2>
   <pre><?= var_dump($clienteA) ?></pre>
   <pre><?= var_dump($clienteB) ?></pre>
 </body>
