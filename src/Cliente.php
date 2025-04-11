@@ -6,12 +6,42 @@ class Cliente
   public int $idade;
   public string $email;
 
-  public function exibirDados(): void
+  public function setNome(string $nome): void
   {
-    echo "<p style='color:red'>Este é o cliente $this->nome</p>";
+    $this->nome = $nome;
   }
-  public function verificarIdade(int $idade): bool
+
+  public function setIdade(string $idade): void
   {
-    return true;
+
+    if ($idade < 0) {
+      throw new InvalidArgumentException("Idade não pode ser negativa!");
+    }
+    $this->idade = $idade;
+  }
+
+  public function setEmail(string $email): void
+  {
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      throw new InvalidArgumentException("E-mail inválido!");
+    }
+    $this->email = $email;
+  }
+
+
+  public function getNome(): string
+  {
+    return $this->nome;
+  }
+
+  public function getIdade(): int
+  {
+    return $this->idade;
+  }
+
+  public function getEmail(): string
+  {
+    return $this->email;
   }
 }
