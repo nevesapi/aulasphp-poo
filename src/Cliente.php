@@ -15,13 +15,9 @@ class Cliente
 
   public function verificarIdade(): string
   {
-    if ($this->idade < 18) {
-      return "Menor de idade";
-    } elseif ($this->idade < 60) {
-      return "Adulto";
-    } else {
-      return "Idoso";
-    }
+    if ($this->idade < 18) return "Menor de idade";
+    if ($this->idade < 60) return "Adulto";
+    return "Idoso";
   }
 
   private function setNome(string $nome): void
