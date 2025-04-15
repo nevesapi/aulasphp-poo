@@ -4,33 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo 03</title>
+  <title>Exemplo 04 | Herança</title>
 </head>
 
 <body>
-  <h1>PHP com POO - Exemplo 03</h1>
+  <h1>PHP com POO - Exemplo 04 | Herança</h1>
   <hr>
 
   <?php
-  require_once "src/Cliente.php";
-
-  //Criando instancia da classe
-  $clienteA = new Cliente("Ciclano", 30, "exemplo@tes.com");
-
+  require_once "./src/Cliente.php"; //main class
+  require_once "./src/PessoaFisica.php"; //sub class
+  $clientePF = new PessoaFisica("Teste", "teste@exemplo.com", 20, "123.456.789-00");
   ?>
 
-  <h2>Acessando/lendo os dados dos objetos</h2>
-  <ul>
-    <li><b>Nome: </b><?= $clienteA->getNome() ?></li>
-    <li><b>Idade: </b><?= $clienteA->getIdade() ?></li>
-    <li><b>E-mail: </b><?= $clienteA->getEmail() ?></li>
-    <li><b>Faixa etária: </b><?= $clienteA->verificarIdade() ?></li>
-  </ul>
-
-  <hr>
-
-  <h2>Testes de acessos aos recursos da classe através do objeto</h2>
-  <pre><?= var_dump($clienteA) ?></pre>
+  <pre><?= var_dump($clientePF) ?></pre>
 </body>
 
 </html>
