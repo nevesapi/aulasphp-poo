@@ -6,12 +6,19 @@ class Cliente
   public int $idade;
   public string $email;
 
-  public function setNome(string $nome): void
+  public function __construct(string $nome, int $idade, string $email)
+  {
+    $this->setNome($nome);
+    $this->setIdade($idade);
+    $this->setEmail($email);
+  }
+
+  private function setNome(string $nome): void
   {
     $this->nome = $nome;
   }
 
-  public function setIdade(string $idade): void
+  private function setIdade(string $idade): void
   {
 
     if ($idade < 0) {
@@ -20,7 +27,7 @@ class Cliente
     $this->idade = $idade;
   }
 
-  public function setEmail(string $email): void
+  private function setEmail(string $email): void
   {
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
