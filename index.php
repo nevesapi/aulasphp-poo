@@ -24,6 +24,7 @@
     <li><b>Nome: </b><?= $clienteA->getNome() ?></li>
     <li><b>Idade: </b><?= $clienteA->getIdade() ?></li>
     <li><b>E-mail: </b><?= $clienteA->getEmail() ?></li>
+    <li><b>Faixa etária: </b><?= $clienteA->verificarIdade() ?></li>
   </ul>
 
   <hr>

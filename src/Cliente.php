@@ -13,6 +13,17 @@ class Cliente
     $this->setEmail($email);
   }
 
+  public function verificarIdade(): string
+  {
+    if ($this->idade < 18) {
+      return "Menor de idade";
+    } elseif ($this->idade < 60) {
+      return "Adulto";
+    } else {
+      return "Idoso";
+    }
+  }
+
   private function setNome(string $nome): void
   {
     $this->nome = $nome;
