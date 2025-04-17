@@ -17,7 +17,8 @@ class PessoaJuridica extends Cliente
 
   public function relatorio(): string
   {
-    return "<div>
+    return "<div>" .
+      parent::relatorio() . "
       <p><b>Nome fantasia: </b> {$this->getNomeFantasia()}</p>
       <p><b>CNPJ: </b> {$this->getCnpj()}</p>
     </div>";
