@@ -12,10 +12,10 @@
   <hr>
 
   <?php
-  require_once "./src/Situacao.php"; //enum class
-  require_once "./src/Cliente.php"; //main class
-  require_once "./src/PessoaFisica.php"; //sub class
-  require_once "./src/PessoaJuridica.php"; //sub class
+  require_once "./src/Enums/Situacao.php"; //enum class
+  require_once "./src/Models/Cliente.php"; //main class
+  require_once "./src/Models/PessoaFisica.php"; //sub class
+  require_once "./src/Models/PessoaJuridica.php"; //sub class
 
   $clientePF = new PessoaFisica("Teste", "teste@exemplo.com", 20, "123.456.789-00");
   $clientePJ = new PessoaJuridica("Denis", "tenis@exemplo.com", "12.345.6789/0001", 2025, "Bilola")
