@@ -15,6 +15,14 @@ class PessoaJuridica extends Cliente
     $this->setSituacao(Situacao::PENDENTE);
   }
 
+  public function relatorio(): string
+  {
+    return "<div>
+      <p><b>Nome fantasia: </b> {$this->getNomeFantasia()}</p>
+      <p><b>CNPJ: </b> {$this->getCnpj()}</p>
+    </div>";
+  }
+
   private function setCnpj(string $cnpj): void
   {
     $this->cnpj = $cnpj;
