@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo 04 | Herança</title>
+  <title>Exemplo 05 | Polimorfismo</title>
 </head>
 
 <body>
-  <h1>PHP com POO - Exemplo 04 | Herança</h1>
+  <h1>PHP com POO - Exemplo 05 | Polimorfismo</h1>
   <hr>
 
   <?php
@@ -21,8 +21,13 @@
   $clientePJ = new PessoaJuridica("Denis", "tenis@exemplo.com", "12.345.6789/0001", 2025, "Bilola")
   ?>
 
-  <pre><?= var_dump($clientePF) ?></pre>
-  <pre><?= var_dump($clientePJ) ?></pre>
+  <h2>Relatórios | Clientes</h2>
+  <h3>PF</h3>
+  <?= $clientePF->relatorio() ?>
+  <hr>
+
+  <h3>PJ</h3>
+  <?= $clientePJ->relatorio() ?>
 </body>
 
 </html>

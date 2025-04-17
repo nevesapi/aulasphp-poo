@@ -13,6 +13,14 @@ class Cliente
     $this->setSituacao($situacao);
   }
 
+  public function relatorio(): string
+  {
+    return "<div>
+      <h4>{$this->getNome()}</h4>
+      <p><b>Contato: </b> {$this->getEmail()}</p>
+    </div>";
+  }
+
   protected function setSituacao(Situacao $situacao): void
   {
     $this->situacao = $situacao;
