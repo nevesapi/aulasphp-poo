@@ -13,7 +13,7 @@ class Cliente
     $this->setSituacao($situacao);
   }
 
-  private function setSituacao(Situacao $situacao): void
+  protected function setSituacao(Situacao $situacao): void
   {
     $this->situacao = $situacao;
   }

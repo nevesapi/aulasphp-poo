@@ -12,6 +12,7 @@ class PessoaJuridica extends Cliente
     $this->setCnpj($cnpj);
     $this->setAnoFundacao($anoFundacao);
     $this->setNomeFantasia($nomeFantasia);
+    $this->setSituacao(Situacao::PENDENTE);
   }
 
   private function setCnpj(string $cnpj): void
