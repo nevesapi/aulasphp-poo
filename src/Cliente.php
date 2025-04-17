@@ -4,11 +4,23 @@ class Cliente
 {
   private string $nome;
   private string $email;
+  private Situacao $situacao;
 
-  public function __construct(string $nome, string $email)
+  public function __construct(string $nome, string $email, Situacao $situacao = Situacao::INATIVO)
   {
     $this->setNome($nome);
     $this->setEmail($email);
+    $this->setSituacao($situacao);
+  }
+
+  private function setSituacao(Situacao $situacao): void
+  {
+    $this->situacao = $situacao;
+  }
+
+  public function getSituacao(): Situacao
+  {
+    return $this->situacao;
   }
 
   private function setNome(string $nome): void

@@ -12,6 +12,7 @@
   <hr>
 
   <?php
+  require_once "./src/Situacao.php"; //enum class
   require_once "./src/Cliente.php"; //main class
   require_once "./src/PessoaFisica.php"; //sub class
   $clientePF = new PessoaFisica("Teste", "teste@exemplo.com", 20, "123.456.789-00");
