@@ -28,6 +28,8 @@
 
   <h3>PJ</h3>
   <?= $clientePJ->relatorio() ?>
+  <!-- Acessando valor da Enum Situação -->
+  <p><b>Situação: </b><?= $clientePJ->getSituacao()->name ?></p>
 </body>
 
 </html>
