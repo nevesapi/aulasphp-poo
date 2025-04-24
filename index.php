@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo 05 | Polimorfismo</title>
+  <title>Exemplo 06 | Namespaces</title>
 </head>
 
 <body>
-  <h1>PHP com POO - Exemplo 05 | Polimorfismo</h1>
+  <h1>PHP com POO - Exemplo 06 | Namespaces</h1>
   <hr>
 
   <?php
