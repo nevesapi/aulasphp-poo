@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo 06 | Namespaces</title>
+  <title>Exemplo 07 | Autoload com Composer</title>
 </head>
 
 <body>
-  <h1>PHP com POO - Exemplo 06 | Namespaces</h1>
+  <h1>PHP com POO - Exemplo 07 | Autoload com Composer</h1>
   <hr>
 
   <?php
@@ -16,10 +16,7 @@
   use MeuProjeto\Models\PessoaJuridica;
   use MeuProjeto\Models\PessoaFisica;
 
-  require_once "./src/Enums/Situacao.php"; //enum class
-  require_once "./src/Models/Cliente.php"; //main class
-  require_once "./src/Models/PessoaFisica.php"; //sub class
-  require_once "./src/Models/PessoaJuridica.php"; //sub class
+  require_once "vendor/autoload.php";
 
   $clientePF = new PessoaFisica("Teste", "teste@exemplo.com", 20, "123.456.789-00");
   $clientePJ = new PessoaJuridica("Denis", "tenis@exemplo.com", "12.345.6789/0001", 2025, "Bilola")
