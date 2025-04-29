@@ -13,13 +13,18 @@
 
   <?php
 
+  use MeuProjeto\Calculadora;
   use MeuProjeto\Models\PessoaJuridica;
   use MeuProjeto\Models\PessoaFisica;
 
   require_once "vendor/autoload.php";
 
   $clientePF = new PessoaFisica("Teste", "teste@exemplo.com", 20, "123.456.789-00");
-  $clientePJ = new PessoaJuridica("Denis", "tenis@exemplo.com", "12.345.6789/0001", 2025, "Bilola")
+  $clientePJ = new PessoaJuridica("Denis", "tenis@exemplo.com", "12.345.6789/0001", 2025, "Bilola");
+
+  $calcSum = Calculadora::soma(2.5, 5);
+
+  echo "<p>Soma: $calcSum</p>";
   ?>
 
   <h2>Relatórios | Clientes</h2>

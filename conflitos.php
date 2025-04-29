@@ -15,8 +15,7 @@
   use Fornecedores\Pagamento;
   use Prestadores\Pagamento as PrestadoresPagamento;
 
-  require_once "src/Fornecedores/Pagamento.php";
-  require_once "src/Prestadores/Pagamento.php";
+  require_once "vendor/autoload.php";
 
   $pagamentoFornecedor = new Pagamento();
   $pagamentoPrestadores = new PrestadoresPagamento();
