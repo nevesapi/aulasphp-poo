@@ -1,5 +1,10 @@
 <?php
 
+namespace MeuProjeto\Models;
+
+use MeuProjeto\Enums\Situacao;
+use InvalidArgumentException;
+
 abstract class Cliente
 {
   private string $nome;

@@ -12,6 +12,10 @@
   <hr>
 
   <?php
+
+  use MeuProjeto\Models\PessoaJuridica;
+  use MeuProjeto\Models\PessoaFisica;
+
   require_once "./src/Enums/Situacao.php"; //enum class
   require_once "./src/Models/Cliente.php"; //main class
   require_once "./src/Models/PessoaFisica.php"; //sub class
